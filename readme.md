@@ -32,12 +32,25 @@ pip install -r requirements.txt
 ```
 
 ### 3. Dataset
-The full MongoDB dataset (approximately 60 MB) is not included in this repository due to file size limits.
-You can download it from the following link:
-https://e.pcloud.link/publink/show?code=VZXBGUZlvEiJygSRGRc9JDoCtxFb4uomVRy
+Due to platform terms of service and content licensing restrictions, the original Twitter/X datasets used in this project are not included in this repository.
+
+This repository contains only the analysis code and documentation.
+
+Expected database structure
+
+To reproduce the analysis, your MongoDB database should contain two collections:
+  tweets
+  twitterAccounts
+
+The collections are expected to store standard Twitter/X API fields, including (but not limited to):
+  tweet_id
+  created_at
+  user_id
+  engagement metrics (e.g. retweet_count, favorite_count)
+  account metadata (e.g. screen_name, followers_count)
 
 ### 4. Prepare your MongoDB database
-- Import the .json data files into MongoDB Compass or the Mongo shell.  
+- Import the data files into MongoDB Compass or the Mongo shell.  
 - Verify you have two collections:
   - tweets  
   - twitterAccounts  
@@ -74,4 +87,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
 
